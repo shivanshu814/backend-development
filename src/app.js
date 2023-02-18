@@ -6,6 +6,7 @@ const app = express();
 const hbs = require('hbs');
 
 require('./db/conn');
+// const Submit = require('./models/registers');
 
 const port = process.env.PORT || 5000;
 
@@ -20,6 +21,15 @@ hbs.registerPartials(partials_path);
 
 app.get('/', (req, res) => {
 	res.render('index');
+});
+
+app.post('/', (req, res) => {
+	try {
+		console.log(req.body.name);
+		res.send(req.body.name);
+	} catch (error) {
+		res.status(400).send(error);
+	}
 });
 
 app.get('/contact', (req, res) => {
