@@ -26,16 +26,18 @@ app.get('/', (req, res) => {
 	res.render('index');
 });
 
-app.post('/', (req, res) => {
+app.post('/', async (req, res) => {
 	try {
 		const savecandidatedata = new Submit({
-			dbname: req.body.name,
-			dbemail: req.body.email,
-			dbphone: req.body.phone,
-			dbabout: req.body.about,
-			dbpassword: req.body.password,
-			l,
+			name: req.body.name,
+			email: req.body.email,
+			phone: req.body.phone,
+			about: req.body.about,
+			password: req.body.password,
 		});
+
+		const submit = await savecandidatedata.save();
+		res.status(201).render('index');
 
 		// console.log(req.body.email);
 		// console.log(req.body.phone);
