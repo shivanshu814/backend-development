@@ -14,6 +14,9 @@ const static_path = path.join(__dirname, '../public');
 const template_path = path.join(__dirname, '../templates/views');
 const partials_path = path.join(__dirname, '../templates/partials');
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 app.use(express.static(static_path));
 app.set('view engine', 'hbs');
 app.set('views', template_path);
@@ -25,8 +28,26 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
 	try {
-		console.log(req.body.name);
-		res.send(req.body.name);
+		const savecandidatedata = new Submit({
+			dbname: req.body.name,
+			dbemail: req.body.email,
+			dbphone: req.body.phone,
+			dbabout: req.body.about,
+			dbpassword: req.body.password,
+			l,
+		});
+
+		// console.log(req.body.email);
+		// console.log(req.body.phone);
+		// console.log(req.body.about);
+		// console.log(req.body.password);
+
+		//getting output in terminal
+		// res.send(req.body.name);
+		// res.send(req.body.email);
+		// res.send(req.body.phone);
+		// res.send(req.body.about);
+		// res.send(req.body.password);
 	} catch (error) {
 		res.status(400).send(error);
 	}
