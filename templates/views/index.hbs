@@ -1,279 +1,56 @@
 <html lang='en'>
+
 	<head>
-		<meta charset='UTF-8' />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-		<link rel='stylesheet' href='../css/reset.css' />
-		<link rel='stylesheet' href='css/style.css' />
-		<link rel='stylesheet' href='css/home.css' />
-		<title>We>Code - Home</title>
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+
+		<title>Better-OnSubmit demo</title>
+
+		<link
+			rel='stylesheet'
+			href='https://unpkg.com/awsm.css/dist/awsm.min.css'
+		/>
 	</head>
+
 	<body>
-		<div class='whitespace-1'>
-			<div id='mySidenav' class='sidenav'>
-				<a
-					href='javascript:void(0)'
-					class='closebtn'
-					onclick='closeNav()'
-				>&times;</a>
-				<a href='/index'>Home</a>
-				<a href='/product'>Platform</a>
-				<a href='/about us'>About</a>
-				<a href='/contact'>Contact</a>
-			</div>
-			<span onclick='openNav()'>&#9776;</span>
-		</div>
+		<form id='form'>
+			<h4>Connecting front end with backend using mongodb and express js and
+				node js</h4>
+			<p>Open console to see the results</p>
+			<fieldset>
+				<legend>Be first</legend>
 
-		<div class='wrapper'>
-			<img
-				style='width: 200px; float: right;'
-				src='images/logo.png'
-				alt='We>Code logo'
-			/>
-			<div class='slideshow-container'>
+				<label class='group'>
+					Name<br />
+					<input name='name' type='text' placeholder='Enter Your Name' />
+				</label>
+				<label class='group'>
+					Email<br />
+					<input name='email' type='email' placeholder='Enter Your Email ID' />
+				</label>
 
-				<div class='mySlides fade'>
-					<img
-						src='images/carousel 1.jpg'
-						style='width:100%'
-						alt='Woman coding on computer'
-					/>
-					<div class='text'>The Place To Be</div>
-				</div>
-
-				<div class='mySlides fade'>
-					<img
-						src='images/carousel 2.jpg'
-						style='width:100%'
-						alt='Man working at multiple computer screens'
-					/>
-					<div class='text'>The Place To Be</div>
-				</div>
-
-				<div class='mySlides fade'>
-					<img
-						src='images/carousel 3.jpg'
-						style='width:100%'
-						alt='Two men working at computer desk'
-					/>
-					<div class='text'>The Place To Be</div>
-				</div>
-
-				<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>
-				<a class='next' onclick='plusSlides(1)'>&#10095;</a>
-
-			</div>
-			<br />
-
-			<div class='dotarea'>
-				<span class='dot' onclick='currentSlide(1)'></span>
-				<span class='dot' onclick='currentSlide(2)'></span>
-				<span class='dot' onclick='currentSlide(3)'></span>
-			</div>
-		</div>
-
-		<div class='wrapper'>
-			<div class='heading'><h2>Why us?</h2></div>
-			<div class='container-aboutme'>
-				<div class='about-us-img'>
-					<img
-						src='images/pic 4.jpg'
-						alt='Top perspective on table with computers'
-						height='390'
-						width='550'
-					/>
-				</div>
-				<div class='about-us-text'>
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
-						ducimus obcaecati, dolorem suscipit assumenda dolore nesciunt
-						commodi corrupti soluta itaque nobis! Quas facere reiciendis ipsam.
-						<br />
-						eligendi ducimus libero itaque, quaerat non! Laborum harum, illum
-						assumenda reiciendis tempora dicta quo aliquam trecusandae.<br
-						/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-						fugit qui doloremque dolore ducimus corrupti laboriosam rerum saepe
-						itaque quia sapiente eaque! Deleniti in totam sed aut earum velit
-						quas omnis modi sapiente, porro accusamus.
-						<br />
-						<br />
-						Voluptate cumque, adipisci aliquid reiciendis reprehenderit, saepe
-						neque vel! Aspernatur ex modi perferendis repudiandae.</p><br /><br
-					/>
-					<div class='link'>
-						<a href='#'>Read More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class='wrapper'>
-			<div class='heading'><h2>Our services</h2></div>
-			<div class='container-services'>
-				<div class='services-img-one'>
-					<img
-						src='images/pic 3.jpg'
-						alt='Team gathered around table'
-						height='350'
-						width='550'
-					/>
-				</div>
-				<div class='services-text-one'>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-						temporibus, corrupti, laboriosam nostrum, beatae officiis porro
-						facere ad maiores a eius ab minima, voluptas delectus nobis dolores
-						repudiandae non. Unde, quibusdam cupiditate.</p><br />
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
-						delectus magni facere ab provident temporibus sunt, odit
-						voluptatibus quas ex blanditiis tempore consequuntur explicabo.</p><br
+				<label class='group'>
+					Phone number<br />
+					<input name='phone' type='tel' placeholder='Numbers only, please' />
+				</label>
+				<label class='group'>
+					Tell us about yourself<br />
+					<textarea name='about'></textarea>
+				</label>
+				<label class='group'>
+					Password<br />
+					<input
+						name='password'
+						type='password'
+						placeholder='Use strong password!'
 					/><br />
-					<div class='link'>
-						<a href='#'>Read More</a>
-					</div>
+				</label>
+				<div class='group'>
+					<button>Submit</button>
+					<button type='reset'>Reset</button>
 				</div>
-				<div class='services-text-two'>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-						temporibus, corrupti, laboriosam nostrum, beatae officiis porro est
-						ipsum placeat ducimus sint. Distinctio quisquam esse officiis
-						accusamus labore itaque ea facere ad maiores a eius ab minima,
-						voluptas delectus nobis dolores repudiandae non. Unde, quibusdam
-						cupiditate.</p>
-					<br />
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
-						delectus magni facere ab provident temporibus sunt, odit
-						voluptatibus quas ex blanditiis tempore consequuntur explicabo.</p>
-					<br />
-					<br />
-					<div class='link'>
-						<a href='#'>Read More</a>
-					</div>
-				</div>
-				<div class='services-img-two'>
-					<img
-						src='images/pic 1.jpg'
-						alt='Woman coding at computer'
-						height='380'
-						width='550'
-					/>
-				</div>
-			</div>
-		</div>
-		<div class='wrapper'>
-			<div class='heading'><h2>Check our portfolio</h2></div>
-			<div class='container-portfolio'>
-				<div class='port-img-one'>
-					<img
-						src='images/pexels-otavio-fonseca-4665064.jpg'
-						alt='Computer with colorful screen'
-						width='400'
-						Height='360'
-					/>
-				</div>
-				<div class='port-img-two'>
-					<img
-						src='images/pic 8.jpg'
-						alt='Desk in dark room with colorful screens'
-						width='400'
-						Height='360'
-					/>
-				</div>
-				<div class='port-img-three'>
-					<img
-						src='images/pic 9.jpg'
-						alt='Double computer screen'
-						width='400'
-						Height='360'
-					/>
-				</div>
-				<div class='port-text'><p>Lorem ipsum dolor sit, amet consectetur
-						adipisicing elit. Consequatur tenetur praesentium veritatis! Ea illo
-						ad ab, expedita voluptatibus odit omnis id odio eum similique sunt
-						exercitationem hic! Ad consequuntur natus consequatur, dolore
-						perspiciatis pariatur quibusdam neque nisi adipisci nam deleniti
-						voluptate fuga quam sit quod aliquam magni veniam? Cupiditate
-						obcaecati animi error non voluptatibus tenetur doloremque ea magnam
-						omnis velit veniam, optio, ipsam est! Natus cupiditate commodi,
-						illum aspernatur quaerat, quia provident dolore eos modi
-						exercitationem<br /><br />Lorem ipsum dolor sit amet consectetur
-						adipisicing elit. Laboriosam saepe dolorum itaque quod sit aliquid
-						placeat atque earum deleniti nobis repudiandae odit reiciendis,
-						nihil architecto? Amet tempora, inventore expedita beatae
-						voluptates, error tenetur iure esse facere, ad modi commodi.
-						Laudantium?</p>
-					<br />
-					<br />
-					<div class='link'>
-						<a href='#'>Read More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class='wrapper'>
-			<div class='container-footer'>
-				<div class='col-1'>
-					<br />
-					<img
-						src='images/logo-footer.png'
-						alt='Logo footer'
-						width='120'
-						height='120'
-					/><br /><br />
-					&copy; 2021 We>Code. All Rights Reserved.
-				</div>
-				<div class='col-2'>
-					<h2>Explore</h2>
-					<br /><br />
-					<div class='links'>
-						<a href='/index'>Home</a><br /><br />
-						<a href='/product'>Services</a><br /><br />
-						<a href='/about us'>About Us</a><br /><br />
-						<a href='/contact'>Contact Us</a><br /><br />
-					</div>
-				</div>
-				<div class='col-3'>
-					<h2>Follow us on</h2><br /><br />
-					<div class='icons'>
-						<div class='icons'>
-							<a href='https://www.facebook.com/'><img
-									src='images/facebook.png'
-									width='25px'
-									height='25px'
-									alt='Facebook logo'
-								/></a>
-							<a href='https://twitter.com/'><img
-									src='images/twitter.png'
-									width='25px'
-									height='25px'
-									alt='Twitter logo'
-								/></a>
-							<a href='https://www.linkedin.com/'><img
-									src='images/linkedin.png'
-									width='25px'
-									height='25px'
-									alt='LinkedIn logo'
-								/></a>
-							<a href='https://www.instagram.com/'><img
-									src='images/instagram.png'
-									width='25px'
-									height='25px'
-									alt='Instagram logo'
-								/></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script>
-			function openNav() { document.getElementById("mySidenav").style.width =
-			"250px"; } function closeNav() {
-			document.getElementById("mySidenav").style.width = "0"; } var slideIndex =
-			1; showSlides(slideIndex); function plusSlides(n) { showSlides(slideIndex
-			+= n); } function currentSlide(n) { showSlides(slideIndex = n); } function
-			showSlides(n) { var i; var slides =
-			document.getElementsByClassName("mySlides"); var dots =
-			document.getElementsByClassName("dot"); if (n > slides.length) {slideIndex
-			= 1} if (n < 1) {slideIndex = slides.length} for (i = 0; i <
-			slides.length; i++) { slides[i].style.display = "none"; } for (i = 0; i <
-			dots.length; i++) { dots[i].className = dots[i].className.replace("
-			active", ""); } slides[slideIndex-1].style.display = "block";
-			dots[slideIndex-1].className += " active"; }
-		</script>
+			</fieldset>
+		</form>
 	</body>
 </html>
