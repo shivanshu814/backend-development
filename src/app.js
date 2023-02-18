@@ -18,8 +18,20 @@ app.set('view engine', 'hbs');
 app.set('views', template_path);
 hbs.registerPartials(partials_path);
 
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
 	res.render('index');
+});
+
+app.get('/contact', (req, res) => {
+	res.render('contact');
+});
+
+app.get('/product', (req, res) => {
+	res.render('product');
+});
+
+app.get('/about us', (req, res) => {
+	res.render('about us');
 });
 
 app.listen(port, () => {
